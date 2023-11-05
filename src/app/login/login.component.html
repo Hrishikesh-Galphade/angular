@@ -1,0 +1,20 @@
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+    <div>
+        <label for="Email Address">Email Address</label>
+        <input type="email" name="emailAddress" id="emailAddress" ngModel required email #email="ngModel">
+        <p *ngIf="!email.valid && email.touched" class="show-error"> Email Addreess Is Invalid.</p>
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" name="password" id="password" ngModel required #password="ngModel">
+        <p *ngIf="!password.valid && password.touched" class="show-error"> Password is required.</p>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!f.valid">Login</button>
+    </div>
+   
+</form>
+
+<button (click)="checkFormStatus()"> checkFormStatus</button>
