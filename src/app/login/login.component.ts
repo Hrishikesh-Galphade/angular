@@ -1,4 +1,4 @@
-import { Component,OnInit,ViewChild,AfterContentInit } from '@angular/core';
+import { Component,OnInit,ViewChild,ChangeDetectorRef,AfterViewChecked } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  {
+export class LoginComponent implements AfterViewChecked {
   
   
   @ViewChild('f') loginfom ;
@@ -16,7 +16,9 @@ export class LoginComponent  {
   emailDefaultValue:string="samdhan@f.com"
  //onSubmit(formElemnt:HTMLFormElement){
    // console.log(formElemnt);}
-  
+   ngAfterViewChecked(){
+    this.setDefaultValue();
+   }
   onSubmit(formElement:NgForm){
     console.log(formElement);
   }
