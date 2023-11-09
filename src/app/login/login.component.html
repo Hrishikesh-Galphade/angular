@@ -1,15 +1,33 @@
 
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
 
+    <div ngModelGroup="usercredentials">
+        <div>
+            <label for="Email Address">Email Address</label>
+            <input type="email" name="emailAddress" id="emailAddress" [ngModel]="emailDefaultValue" required email #email="ngModel">
+            <p *ngIf="!email.valid && email.touched" class="show-error"> Email Addreess Is Invalid.</p>
+        </div>
+        <div>
+            <label for="Password">Password</label>
+            <input type="password" name="password" id="password" ngModel required #password="ngModel">
+            <p *ngIf="!password.valid && password.touched" class="show-error"> Password is required.</p>
+        </div>
+    </div>
+    
     <div>
-        <label for="Email Address">Email Address</label>
-        <input type="email" name="emailAddress" id="emailAddress" ngModel required email #email="ngModel">
-        <p *ngIf="!email.valid && email.touched" class="show-error"> Email Addreess Is Invalid.</p>
+        <label for="Password">Select Admin Role:</label>
+        <select ngModel required name="role">
+            <option name="superadmin" value="superadmin">Superadmin</option>
+            <option name="Mainuser" value="Mainuser">Mainuser</option>
+            <option name="EndUser" value="EndUser">End User</option>
+            <option name="Accountant" value="Accountant">Accountant</option>
+        </select>
     </div>
     <div>
-        <label for="Password">Password</label>
-        <input type="password" name="password" id="password" ngModel required #password="ngModel">
-        <p *ngIf="!password.valid && password.touched" class="show-error"> Password is required.</p>
+        <label for="Password">Gender:</label>
+        <div *ngFor="let gender of genders">
+            <input type="radio" name="gender" ngModel [value]='gender'>{{gender}}
+        </div>
     </div>
     <div>
         <button type="submit" [disabled]="!f.valid">Login</button>
@@ -18,3 +36,4 @@
 </form>
 
 <button (click)="checkFormStatus()"> checkFormStatus</button>
+<button (click)="setDefaultValue()"> Set Default Value</button>
