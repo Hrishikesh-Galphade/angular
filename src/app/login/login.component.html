@@ -30,7 +30,8 @@
         </div>
     </div>
     <div>
-        <button type="submit" [disabled]="!f.valid">Login</button>
+        <button value="text" > Click me</button>
+        <button type="submit" [attr.style]="'background-color:red'" [disabled]="!f.valid">Login</button>
     </div>
    
 </form>

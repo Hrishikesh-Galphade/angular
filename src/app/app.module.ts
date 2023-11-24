@@ -7,13 +7,17 @@ import { HelloComponent } from './hello/hello.component';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { TestingComponent } from './testing/testing.component';
+import { HighlighdivDirective } from './highlighdiv.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    TestingComponent,
+    HighlighdivDirective,
   ],
   imports: [
     BrowserModule,

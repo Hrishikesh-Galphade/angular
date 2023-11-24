@@ -1,0 +1,67 @@
+I am in testing  and its working
+
+<input [type]="inputType" value="Test">
+
+<button (click)="toggleInputType()"> Toggle Input Type</button>
+
+<div [innerHTML]="innerHtmlText"></div>
+<div [innerText]="innerHtmlText"></div>
+
+<div [attr.style]="'background-color:red;color:white'">
+    This is the style attribute test with hardcode values
+</div>
+
+<div [attr.style]="'background-color:'+backgroundColor+';color:'+textColor">
+    This is the style attribute test with values from .ts file
+</div>
+
+<div [style]="'background-color:'+backgroundColor+';color:'+textColor">
+    This is the style property test with values from .ts file
+</div>
+
+<div [style.background-color]="backgroundColor" [style.color]="textColor">
+    This is the style property test with values from .ts file
+</div>
+
+<div [style]="stylesPropertyCombination">
+    This is the style initilize from .ts with the record of string key and value
+</div>
+
+<div [ngStyle]="stylesPropertyCombination">
+    This is the style initilize from ngStyle inbuild Directives
+</div>
+
+<div [class.backgroundColorClass]="true" [class.textColorClass]="false">
+    This is the simple example of [class]
+</div>
+<div [class.backgroundColorClass]="s=='hello'?true:false" [class.textColorClass]="true">
+    This is the simple example of [class]
+</div>
+
+<div [class]="'backgroundColorClass textColorClass'">
+    This is the simple example of [class]
+</div>
+
+<div [class]="classesPropertyCombination">
+    This is the simple example of [class]
+</div>
+
+<div [ngClass]="classesPropertyCombination">
+    This is the simple example of [class]
+</div>
+
+<div [attr.class]="classesPropertyCombination">
+    This is the simple example of [class]
+</div>
+
+<div [attr.class]="'backgroundColorClass textColorClass'">
+    This is the simple example of [class] with at
+</div>
+
+<div appHighlighdiv>
+    This is my custome directives.
+</div>
+
+<div appHighlighdiv>
+    This is my custome directives with green color.
+</div>

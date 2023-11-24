@@ -2,7 +2,7 @@ import { Component,OnInit,ViewChild,ChangeDetectorRef,AfterViewChecked } from '@
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: '[app-login]',
+  selector: '.app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
