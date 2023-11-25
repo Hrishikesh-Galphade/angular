@@ -65,3 +65,9 @@ I am in testing  and its working
 <div appHighlighdiv>
     This is my custome directives with green color.
 </div>
+
+<button (click)="chageValue()" value="chnageValue">Change Value</button>{{showParagraph}}
+<p *ngIf="showParagraph;then myif else mylese"> if true</p>
+<ng-template  #mylese>if False</ng-template>
+<ng-template  #myif>if true</ng-template>
+

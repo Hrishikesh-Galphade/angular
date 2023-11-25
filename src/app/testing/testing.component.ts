@@ -14,7 +14,7 @@ export class TestingComponent implements OnInit {
   s='hello';
   backgroundColor:string="green";
   textColor:string = "white";
-
+  showParagraph:boolean=true;
   stylesPropertyCombination:Record<string,string> =null; 
   classesPropertyCombination:Record<string,boolean> =null; 
 
@@ -43,5 +43,14 @@ export class TestingComponent implements OnInit {
       this.inputType="button";
     }
 
+  }
+
+  chageValue(){
+    if(this.showParagraph){
+      this.showParagraph=false;
+    }
+    else{
+      this.showParagraph=true;
+    }
   }
 }
