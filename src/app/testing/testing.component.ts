@@ -17,7 +17,7 @@ export class TestingComponent implements OnInit {
   showParagraph:boolean=true;
   stylesPropertyCombination:Record<string,string> =null; 
   classesPropertyCombination:Record<string,boolean> =null; 
-
+  heros = ["Bhagtsing","Vallabahi patel","Mahatama gandhi","Savarkar","Tilak"]
   //
   ngOnInit(){
 

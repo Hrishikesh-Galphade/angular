@@ -17,7 +17,7 @@ export class LoginComponent implements AfterViewChecked {
  //onSubmit(formElemnt:HTMLFormElement){
    // console.log(formElemnt);}
    ngAfterViewChecked(){
-    this.setDefaultValue();
+    //this.setDefaultValue();
    }
   onSubmit(formElement:NgForm){
     console.log(formElement);

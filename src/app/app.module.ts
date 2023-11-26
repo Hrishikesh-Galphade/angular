@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { TestingComponent } from './testing/testing.component';
 import { HighlighdivDirective } from './highlighdiv.directive';
+import { CopyOfIfDirective } from './copy-of-if.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HighlighdivDirective } from './highlighdiv.directive';
     LoginComponent,
     TestingComponent,
     HighlighdivDirective,
+    CopyOfIfDirective,
   ],
   imports: [
     BrowserModule,

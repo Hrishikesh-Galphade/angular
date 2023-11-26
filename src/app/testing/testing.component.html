@@ -67,7 +67,39 @@ I am in testing  and its working
 </div>
 
 <button (click)="chageValue()" value="chnageValue">Change Value</button>{{showParagraph}}
-<p *ngIf="showParagraph;then myif else mylese"> if true</p>
+
+<p *ngIf="showParagraph"> if true</p>
+<ng-template [ngIf] ="showParagraph" >if true</ng-template>
+
+<p *ngIf="showParagraph;else mylese"> if true</p>
+<p *ngIf="showParagraph;then myif else mylese"></p>
 <ng-template  #mylese>if False</ng-template>
 <ng-template  #myif>if true</ng-template>
+
+
+<ul>
+    <li>Bhagtsing</li>
+    <li>Vallabahi patel</li>
+    <li>Mahatama gandhi</li>
+    <li>Savarkar</li>
+    <li>Tilak</li>
+</ul>
+
+<ul>
+    <li *ngFor="let hero of heros">{{hero}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let hero of heros;let i=index">{{i+1}}-{{hero}}</li>
+</ul>
+<div *ngIf="showParagraph">
+    <select >
+        <option *ngFor="let hero of heros" [value]="hero"> {{hero}}</option>
+    </select>
+</div>
+
+<button (click)="chageValue()" value="chnageValue">Change Value</button>{{showParagraph}}
+<p *appCopyOfIf="showParagraph"> I am in a my Custom structural directives</p>
+
+
 
