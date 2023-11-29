@@ -27,6 +27,7 @@ import { CopyOfIfDirective } from './copy-of-if.directive';
     FormsModule
   ],
   providers: [],
+  exports:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
