@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { TestingComponent } from './testing/testing.component';
 import { HighlighdivDirective } from './highlighdiv.directive';
 import { CopyOfIfDirective } from './copy-of-if.directive';
+import { TestDirective } from './test.directive';
+import { RegisterComponent } from './register/register.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { CopyOfIfDirective } from './copy-of-if.directive';
     TestingComponent,
     HighlighdivDirective,
     CopyOfIfDirective,
+    TestDirective,
+    RegisterComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
