@@ -4,6 +4,7 @@ import { SuperadminContainerComponent } from './superadmin-container/superadmin-
 import { AdminRoleManagmentComponent } from './superadmin-container/admin-role-managment/admin-role-managment.component';
 import { RouterModule,Routes } from '@angular/router';
 import { DashboardComponent } from './superadmin-container/dashboard/dashboard.component'
+import { SharedModule } from '../shared/shared.module';
 
 const superAdminRoute:Routes =[
   {path:'',component:AdminRoleManagmentComponent},
@@ -19,6 +20,7 @@ const superAdminRoute:Routes =[
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(superAdminRoute)
   ]
 })
