@@ -1,5 +1,5 @@
 import { Component,OnInit,ViewChild,ChangeDetectorRef,AfterViewChecked } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm,FormGroup,FormControl } from '@angular/forms';
 import {Router} from '@angular/router'
 
 @Component({
@@ -7,9 +7,22 @@ import {Router} from '@angular/router'
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   
+  loginForm:FormGroup;
   constructor(private router: Router){}
+  ngOnInit(){
+
+    this.loginForm = new FormGroup({
+      "username":new FormControl("hrishikesh"),
+      "password":new FormControl("Test@123")
+    })
+  
+  }
+
+  onLoginFormSubmit(){
+    console.log(this.loginForm)
+  }
 
   redirectToUser(){
     this.router.navigate(['/superadmin/dashboard']);
